@@ -1,0 +1,24 @@
+Dec 01 18:16:18.444 HYPERVISOR: Release 0.2.16-amd64/Darwin (tag 2015060118)
+Dec 01 18:16:18.444 HYPERVISOR: Started on IP = 192.168.251.1, TCP port = 54690.
+Dec 01 18:16:18.464 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 01 18:16:18.465 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/dreigada/IST/AR/Proj/project-files/dynamips 
+Dec 01 18:16:18.465 GENERAL: working_dir=/Users/dreigada/IST/AR/Proj/project-files/dynamips
+Dec 01 18:16:18.466 HYPERVISOR: exec_cmd: vm create SW1 3 c3725 
+Dec 01 18:16:18.466 VM: VM SW1 created.
+Dec 01 18:16:18.466 HYPERVISOR: exec_cmd: vm set_con_tcp_port SW1 2002 
+Dec 01 18:16:18.467 HYPERVISOR: exec_cmd: c3725 get_mac_addr SW1 
+Dec 01 18:16:18.468 HYPERVISOR: exec_cmd: vm set_disk0 SW1 1 
+Dec 01 18:16:18.469 HYPERVISOR: exec_cmd: vm get_status SW1 
+Dec 01 18:16:18.470 HYPERVISOR: exec_cmd: vm slot_add_binding SW1 1 0 NM-16ESW 
+Dec 01 18:16:18.471 HYPERVISOR: exec_cmd: vm get_status SW1 
+Dec 01 18:16:18.472 HYPERVISOR: exec_cmd: vm set_idle_pc SW1 0x60a69954 
+Dec 01 18:16:18.473 HYPERVISOR: exec_cmd: vm set_ios SW1 /Users/dreigada/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 01 18:16:18.474 HYPERVISOR: exec_cmd: vm set_nvram SW1 256 
+Dec 01 18:16:18.476 HYPERVISOR: exec_cmd: vm set_config SW1 configs/i3_startup-config.cfg 
+Dec 01 18:16:33.411 HYPERVISOR: exec_cmd: vm rename SW1 SW11 
+Dec 01 18:17:29.571 HYPERVISOR: exec_cmd: nio create_udp udp-147ec25a-d39d-406b-918d-27eb86f41b9b 10000 192.168.251.1 10001 
+Dec 01 18:17:29.578 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW11 1 1 udp-147ec25a-d39d-406b-918d-27eb86f41b9b 
+Dec 01 18:17:29.580 HYPERVISOR: exec_cmd: vm get_status SW11 
+Dec 01 18:17:48.406 HYPERVISOR: exec_cmd: nio create_udp udp-855929c4-3f86-4598-b83b-876450a53753 10007 192.168.251.1 10006 
+Dec 01 18:17:48.407 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW11 1 0 udp-855929c4-3f86-4598-b83b-876450a53753 
+Dec 01 18:17:48.409 HYPERVISOR: exec_cmd: vm get_status SW11 
