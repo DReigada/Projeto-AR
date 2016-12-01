@@ -21,3 +21,7 @@ Dec 01 18:17:29.580 HYPERVISOR: exec_cmd: vm get_status Swr1
 Dec 01 18:17:39.313 HYPERVISOR: exec_cmd: nio create_udp udp-ae3d0162-0db5-4a02-921e-dad62b6924c5 10003 192.168.251.1 10002 
 Dec 01 18:17:39.321 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Swr1 1 0 udp-ae3d0162-0db5-4a02-921e-dad62b6924c5 
 Dec 01 18:17:39.322 HYPERVISOR: exec_cmd: vm get_status Swr1 
+Dec 01 18:22:45.638 HYPERVISOR: exec_cmd: vm extract_config Swr1 
+Dec 01 18:23:36.462 HYPERVISOR: exec_cmd: vm rename Swr1 SwR7 
+Dec 01 18:23:41.457 HYPERVISOR: exec_cmd: vm extract_config SwR7 
+Dec 01 18:23:42.102 HYPERVISOR: exec_cmd: vm extract_config SwR7 

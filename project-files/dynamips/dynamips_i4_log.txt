@@ -22,3 +22,15 @@ Dec 01 18:17:39.323 HYPERVISOR: exec_cmd: vm get_status SW10
 Dec 01 18:17:44.659 HYPERVISOR: exec_cmd: nio create_udp udp-abc76b5a-69e7-41d0-80f9-1be0cb43056e 10004 192.168.251.1 10005 
 Dec 01 18:17:44.665 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW10 1 1 udp-abc76b5a-69e7-41d0-80f9-1be0cb43056e 
 Dec 01 18:17:44.666 HYPERVISOR: exec_cmd: vm get_status SW10 
+Dec 01 18:21:51.883 HYPERVISOR: exec_cmd: nio create_udp udp-3c256168-664e-4f26-aa6d-b6006253c11f 10014 192.168.251.1 10015 
+Dec 01 18:21:51.891 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW10 1 5 udp-3c256168-664e-4f26-aa6d-b6006253c11f 
+Dec 01 18:21:51.892 HYPERVISOR: exec_cmd: vm get_status SW10 
+Dec 01 18:22:01.869 HYPERVISOR: exec_cmd: vm get_status SW10 
+Dec 01 18:22:01.871 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding SW10 1 5 
+Dec 01 18:22:01.883 HYPERVISOR: exec_cmd: nio delete udp-3c256168-664e-4f26-aa6d-b6006253c11f 
+Dec 01 18:22:07.163 HYPERVISOR: exec_cmd: nio create_udp udp-c9960c3f-2e08-4d06-9776-ece22678bc9c 10014 192.168.251.1 10015 
+Dec 01 18:22:07.169 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW10 1 5 udp-c9960c3f-2e08-4d06-9776-ece22678bc9c 
+Dec 01 18:22:07.171 HYPERVISOR: exec_cmd: vm get_status SW10 
+Dec 01 18:22:45.643 HYPERVISOR: exec_cmd: vm extract_config SW10 
+Dec 01 18:23:41.461 HYPERVISOR: exec_cmd: vm extract_config SW10 
+Dec 01 18:23:42.107 HYPERVISOR: exec_cmd: vm extract_config SW10 

@@ -1,0 +1,1 @@
+Dec 01 18:23:36.462 VM: renamed from 'Swr1' to 'SwR7'
