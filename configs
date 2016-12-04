@@ -1,0 +1,318 @@
+conf t
+int f0/0
+ip add 10.0.10.103 255.255.255.0
+no shut
+
+
+#switch config
+
+vlan database
+vlan 2
+vlan 3
+apply
+exit
+conf t
+no ip routing
+int f1/0
+switchport mode trunk 
+exit
+int f1/1
+switchport mode trunk 
+exit
+int range f1/2 - 4
+switchport access vlan 1
+exit
+int range f1/5 - 9
+switchport access vlan 2
+exit
+int range f1/10 - 14
+switchport access vlan 3
+exit
+int vlan 1
+ip add 10.0.10.10 255.255.255.192
+exit
+int vlan 2
+ip add 10.0.10.74 255.255.255.192
+exit
+int vlan 3
+ip add 10.0.10.138 255.255.255.192
+exit
+end
+
+
+#switches config
+
+vlan database
+vlan 2
+vlan 3
+apply
+exit
+conf t
+no ip routing
+int f1/0
+switchport mode trunk 
+exit
+int f1/1
+switchport mode trunk 
+exit
+int vlan 1
+ip add 10.0.10.7 255.255.255.192
+no shut
+exit
+int vlan 2
+ip add 10.0.10.71 255.255.255.192
+no shut
+exit
+int vlan 3
+ip add 10.0.10.135 255.255.255.192
+no shut
+exit
+end
+conf t
+int vlan 1
+no shut
+exit
+int vlan 2
+no shut
+exit
+int vlan 3
+no shut
+exit
+
+#DHCP conf
+
+conf t
+ip dhcp excluded-address 10.0.10.192 10.0.10.255
+ip dhcp excluded-address 10.0.10.0 10.0.10.12
+ip dhcp excluded-address 10.0.10.64 10.0.10.76
+ip dhcp excluded-address 10.0.10.128 10.0.10.140
+
+ip dhcp pool VLAN1
+network 10.0.10.0 /26
+default-router 10.0.10.7
+import all
+exit
+
+ip dhcp pool VLAN2
+network 10.0.10.64 /26
+default-router 10.0.10.71
+import all
+exit
+
+ip dhcp pool VLAN3
+network 10.0.10.128 /26
+default-router 10.0.10.135
+import all
+exit
+end
+
+
+#PC's conf 
+conf t
+int f0/0
+no shut
+ip add dhcp
+end
+
+
+
+
+
+# external int swr7
+
+conf t 
+router ospf 1
+router-id 7.7.7.7
+network 201.6.0.128 0.0.0.63 area 0
+network 201.6.0.64 0.0.0.63 area 0
+int s2/0 
+ip add 201.6.0.137 255.255.255.192
+encapsulation ppp
+no shut
+int f0/0
+ip add 201.6.0.67 255.255.255.192
+no shut
+end
+
+conf t 
+router ospf 1
+router-id 6.6.6.6
+network 201.6.0.64 0.0.0.63 area 0
+int f0/1
+ip add 201.6.0.66 255.255.255.192
+no shut
+end
+
+
+conf t 
+router ospf 1
+router-id 2.2.2.2
+network 201.6.0.128 0.0.0.63 area 0
+int s1/0 
+ip add 201.6.0.132 255.255.255.192
+encapsulation ppp
+no shut
+end
+
+
+
+conf t 
+int vlan 1
+ip nat inside
+int vlan 2
+ip nat inside
+int vlan 3
+ip nat inside
+int s2/0
+ip nat outside
+int f0/0
+ip nat outside
+exit
+
+access-list 7 permit 10.0.10.0 0.0.0.63
+access-list 7 permit 10.0.10.64 0.0.0.63
+access-list 7 permit 10.0.10.128 0.0.0.63
+ip nat inside source list 7 interface f0/0 overload
+
+
+
+ip nat pool ovrld 201.6.0.67 201.6.0.67 prefix 26
+ip nat inside source list 7 pool ovrld overload
+
+####
+AREA 4
+
+#R1
+
+conf t
+ip routing
+int s1/0
+encapsulation ppp 
+ip add 201.6.0.201 255.255.255.192
+no shut
+int f0/1
+ip add 201.6.4.1 255.255.255.192
+no shut
+int f0/0
+ip add 201.6.4.201 255.255.255.192
+no shut
+exit
+router ospf 1
+router-id 1.1.1.1
+network 201.6.4.192 0.0.0.63 area 4
+network 201.6.4.0 0.0.0.63 area 4
+network 201.6.0.192 0.0.0.63 area 0
+end
+
+#R2
+
+conf t
+ip routing
+int s1/0
+encapsulation ppp 
+ip add 201.6.0.132 255.255.255.192
+no shut
+int f0/1
+ip add 201.6.4.72 255.255.255.192
+no shut
+int f0/0
+ip add 201.6.4.2 255.255.255.192
+no shut
+exit
+router ospf 1
+router-id 2.2.2.2
+network 201.6.4.64 0.0.0.63 area 4
+network 201.6.4.0 0.0.0.63 area 4
+network 201.6.0.128 0.0.0.63 area 0
+end
+
+#R3
+
+conf t
+ip routing
+int f1/0
+ip add 201.6.4.133 255.255.255.192
+no shut
+int f0/1
+ip add 201.6.4.73 255.255.255.192
+no shut
+int f0/0
+ip add 201.6.4.203 255.255.255.192
+no shut
+exit
+router ospf 1
+router-id 3.3.3.3
+network 201.6.4.128 0.0.0.63 area 4
+network 201.6.4.64 0.0.0.63 area 4
+network 201.6.4.192 0.0.0.63 area 4
+end
+
+# PC1
+conf t 
+no ip routing
+ip default-gateway 201.6.4.133
+int f0/0
+ip add 201.6.4.131 255.255.255.192
+no shut
+end
+
+
+#### AREA 2
+
+# R6
+
+conf t
+int f0/1
+ip add 201.6.0.66 255.255.255.192
+no shut
+int f0/0
+ip add 201.6.0.6 255.255.255.192
+no shut
+int f1/0
+ip add 201.6.2.6 255.255.255.0
+no shut
+exit
+
+router ospf 1
+router-id 6.6.6.6
+network 201.6.0.0 0.0.0.63 area 0
+network 201.6.0.64 0.0.0.63 area 0
+network 201.6.2.0 0.0.0.255 area 2
+end
+
+
+# R5
+
+conf t
+int f0/1
+ip add 201.6.2.5 255.255.255.0
+no shut
+int f0/0
+ip add 201.6.0.5 255.255.255.192
+no shut
+exit
+
+router ospf 1
+router-id 5.5.5.5
+network 201.6.0.0 0.0.0.63 area 0
+network 201.6.2.0 0.0.0.255 area 2
+end
+
+# PC6
+
+conf t 
+no ip routing
+ip default-gateway 201.6.0.6
+int f0/0
+ip add 201.6.2.107 255.255.255.0
+no shut
+end
+
+
+
+
+
+
+
+
+
