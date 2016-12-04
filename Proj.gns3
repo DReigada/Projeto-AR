@@ -231,28 +231,6 @@
                 }
             },
             {
-                "description": "Link from SwR7 port Serial2/0 to R2 port Serial1/0",
-                "destination_node_id": 14,
-                "destination_port_id": 176,
-                "destination_port_label": {
-                    "color": "#ff000000",
-                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "s1/0",
-                    "x": 65.07106781186545,
-                    "y": 36.0
-                },
-                "id": 10,
-                "source_node_id": 1,
-                "source_port_id": 180,
-                "source_port_label": {
-                    "color": "#ff000000",
-                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "s2/0",
-                    "x": -55.5,
-                    "y": -8.5
-                }
-            },
-            {
                 "description": "Link from R6 port FastEthernet1/0 to SW1 port 4",
                 "destination_node_id": 20,
                 "destination_port_id": 249,
@@ -436,8 +414,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "s1/0",
-                    "x": -39.12489168102783,
-                    "y": 12.100505063388368
+                    "x": -30.639610306789265,
+                    "y": 42.50609665440993
                 },
                 "id": 23,
                 "source_node_id": 23,
@@ -446,8 +424,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "s1/0",
-                    "x": 78.59797974644661,
-                    "y": 4.564971157455602
+                    "x": 90.6187950266179,
+                    "y": -0.384776310850242
                 }
             },
             {
@@ -515,6 +493,28 @@
                     "x": 59.064971157455716,
                     "y": 8.993903345590098
                 }
+            },
+            {
+                "description": "Link from R2 port Serial1/0 to SwR7 port Serial2/0",
+                "destination_node_id": 1,
+                "destination_port_id": 180,
+                "destination_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "s2/0",
+                    "x": -48.039105243400925,
+                    "y": -7.612698372208079
+                },
+                "id": 27,
+                "source_node_id": 14,
+                "source_port_id": 176,
+                "source_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "s1/0",
+                    "x": 65.5269119345812,
+                    "y": 34.72792206135786
+                }
             }
         ],
         "nodes": [
@@ -549,7 +549,7 @@
                         "adapter_number": 2,
                         "description": "connected to R2 on port Serial1/0",
                         "id": 180,
-                        "link_id": 10,
+                        "link_id": 27,
                         "name": "Serial2/0",
                         "nio": "NIO_UDP",
                         "port_number": 0
@@ -1538,7 +1538,7 @@
                         "adapter_number": 1,
                         "description": "connected to SwR7 on port Serial2/0",
                         "id": 176,
-                        "link_id": 10,
+                        "link_id": 27,
                         "name": "Serial1/0",
                         "nio": "NIO_UDP",
                         "port_number": 0
@@ -2307,7 +2307,7 @@
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                 "text": "201.6.0.132/26",
-                "x": -283.53196256846456,
+                "x": -270.8040405071068,
                 "y": -45.67914882607884
             },
             {
@@ -2362,14 +2362,14 @@
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.4.33/26",
+                "text": "201.6.4.133/26",
                 "x": -547.2037149124674,
                 "y": -130.8183258569794
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.4.31/26",
+                "text": "201.6.4.131/26",
                 "x": -573.165655689593,
                 "y": -182.94321753800733
             },
@@ -2386,6 +2386,22 @@
                 "text": "201.6.4.201/26",
                 "x": -424.9783181680512,
                 "y": -241.938166904124
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "201.6.0.201/26",
+                "x": -245.87214972614174,
+                "y": -233.95183950935888,
+                "z": 1.0
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "201.6.0.204/26",
+                "x": -30.710678118654663,
+                "y": -286.78383797157323,
+                "z": 1.0
             }
         ],
         "servers": [
