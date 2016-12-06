@@ -90,18 +90,21 @@ ip dhcp excluded-address 10.0.10.128 10.0.10.140
 ip dhcp pool VLAN1
 network 10.0.10.0 /26
 default-router 10.0.10.7
+dns-server 201.6.1.100
 import all
 exit
 
 ip dhcp pool VLAN2
 network 10.0.10.64 /26
 default-router 10.0.10.71
+dns-server 201.6.1.100
 import all
 exit
 
 ip dhcp pool VLAN3
 network 10.0.10.128 /26
 default-router 10.0.10.135
+dns-server 201.6.1.100
 import all
 exit
 end
@@ -335,9 +338,12 @@ end
 
 
 ##### DNS ON ALL ROUTERS
+conf t
 ip domain lookup
 ip name-server 201.6.1.100
+end
 
+ping ns1.ar.org repeat 3
 
 
 
