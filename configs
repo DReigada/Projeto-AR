@@ -334,7 +334,9 @@ end
 
 
 
-
+##### DNS ON ALL ROUTERS
+ip domain lookup
+ip name-server 201.6.1.100
 
 
 
