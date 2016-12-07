@@ -8,29 +8,49 @@
         "ellipses": [
             {
                 "border_style": 2,
-                "height": 364.86709909225846,
-                "width": 425.6782822743016,
-                "x": -635.2245301926389,
-                "y": -336.58282784479655
+                "height": 380.2842712474619,
+                "width": 406.2245301926389,
+                "x": -633.3961030678927,
+                "y": -316.5441558772843
             },
             {
                 "border_style": 2,
                 "height": 351.938166904124,
                 "width": 403.05086527633205,
                 "x": 356.5828278447965,
-                "y": -320.11836175072943,
-                "z": -1.0
+                "y": -294.66251762801375
             },
             {
                 "border_style": 2,
-                "height": 381.99999999999994,
+                "height": 351.2548339959387,
                 "width": 569.9999999999999,
-                "x": -209.9999999999999,
-                "y": -76.0,
-                "z": -1.0
+                "x": -212.8284271247461,
+                "y": -16.97056274847712
             }
         ],
         "links": [
+            {
+                "description": "Link from SwR7 port FastEthernet1/0 to SW10 port FastEthernet1/0",
+                "destination_node_id": 4,
+                "destination_port_id": 41,
+                "destination_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f1/0",
+                    "x": -47.27708763999664,
+                    "y": 7.111456180001682
+                },
+                "id": 1,
+                "source_node_id": 1,
+                "source_port_id": 3,
+                "source_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f1/0",
+                    "x": 61.27708763999664,
+                    "y": 34.388543819998326
+                }
+            },
             {
                 "description": "Link from PC3 port FastEthernet0/0 to SW12 port FastEthernet1/5",
                 "destination_node_id": 5,
@@ -42,7 +62,7 @@
                     "x": -35.86753236814713,
                     "y": 27.213203435596427
                 },
-                "id": 1,
+                "id": 2,
                 "source_node_id": 9,
                 "source_port_id": 81,
                 "source_port_label": {
@@ -64,7 +84,7 @@
                     "x": 73.27708763999664,
                     "y": -2.888543819998315
                 },
-                "id": 2,
+                "id": 3,
                 "source_node_id": 4,
                 "source_port_id": 42,
                 "source_port_label": {
@@ -73,28 +93,6 @@
                     "text": "f1/1",
                     "x": -38.27708763999664,
                     "y": 21.88854381999832
-                }
-            },
-            {
-                "description": "Link from SwR7 port FastEthernet1/0 to SW10 port FastEthernet1/0",
-                "destination_node_id": 4,
-                "destination_port_id": 41,
-                "destination_port_label": {
-                    "color": "#ff000000",
-                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "f1/0",
-                    "x": -47.27708763999664,
-                    "y": 7.111456180001682
-                },
-                "id": 3,
-                "source_node_id": 1,
-                "source_port_id": 3,
-                "source_port_label": {
-                    "color": "#ff000000",
-                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "f1/0",
-                    "x": 64.27708763999664,
-                    "y": 26.38854381999832
                 }
             },
             {
@@ -149,8 +147,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "f1/1",
-                    "x": -47.0466402616971,
-                    "y": 27.246408196267353
+                    "x": -43.04664026169709,
+                    "y": 34.246408196267346
                 },
                 "id": 6,
                 "source_node_id": 12,
@@ -225,8 +223,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "f0/0",
-                    "x": 51.063059318694,
-                    "y": -12.000414874676636
+                    "x": 52.477272881067094,
+                    "y": -7.757774187557352
                 }
             },
             {
@@ -237,8 +235,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "s2/0",
-                    "x": -48.039105243400925,
-                    "y": -7.612698372208079
+                    "x": -42.38225099390854,
+                    "y": -3.3700576850887956
                 },
                 "id": 10,
                 "source_node_id": 14,
@@ -247,8 +245,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "s1/0",
-                    "x": 66.5269119345812,
-                    "y": 36.72792206135786
+                    "x": 66.69848480983501,
+                    "y": 22.284271247461902
                 }
             },
             {
@@ -259,8 +257,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "4",
-                    "x": -4.914930366597673,
-                    "y": 42.337591013633556
+                    "x": -9.864677834903432,
+                    "y": 33.85230963939499
                 },
                 "id": 11,
                 "source_node_id": 13,
@@ -269,52 +267,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "f1/0",
-                    "x": 66.34386255473214,
-                    "y": -0.09495032651426527
-                }
-            },
-            {
-                "description": "Link from R6 port FastEthernet0/0 to SW2 port 4",
-                "destination_node_id": 21,
-                "destination_port_id": 258,
-                "destination_port_label": {
-                    "color": "#ff000000",
-                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "4",
-                    "x": 53.225662587409715,
-                    "y": 42.430648536128444
-                },
-                "id": 12,
-                "source_node_id": 13,
-                "source_port_id": 161,
-                "source_port_label": {
-                    "color": "#ff000000",
-                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "f0/0",
-                    "x": -13.817545679446482,
-                    "y": -27.60222141138226
-                }
-            },
-            {
-                "description": "Link from PC7 port FastEthernet0/0 to SW1 port 2",
-                "destination_node_id": 20,
-                "destination_port_id": 247,
-                "destination_port_label": {
-                    "color": "#ff000000",
-                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "2",
-                    "x": 64.47673458961003,
-                    "y": 41.11010359272818
-                },
-                "id": 13,
-                "source_node_id": 17,
-                "source_port_id": 234,
-                "source_port_label": {
-                    "color": "#ff000000",
-                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "f0/0",
-                    "x": -24.761005837071934,
-                    "y": 8.632537094391097
+                    "x": 67.0509693359187,
+                    "y": 11.218758172470494
                 }
             },
             {
@@ -328,15 +282,59 @@
                     "x": -37.48892789842978,
                     "y": 40.46796796899724
                 },
-                "id": 14,
+                "id": 12,
                 "source_node_id": 20,
                 "source_port_id": 248,
                 "source_port_label": {
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "3",
-                    "x": 70.13358883910246,
-                    "y": -4.867462905608903
+                    "x": 72.96201596384867,
+                    "y": -14.766957842220563
+                }
+            },
+            {
+                "description": "Link from R6 port FastEthernet0/0 to SW2 port 4",
+                "destination_node_id": 21,
+                "destination_port_id": 258,
+                "destination_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "4",
+                    "x": 53.225662587409715,
+                    "y": 42.430648536128444
+                },
+                "id": 13,
+                "source_node_id": 13,
+                "source_port_id": 161,
+                "source_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/0",
+                    "x": -26.817545679446482,
+                    "y": -20.60222141138226
+                }
+            },
+            {
+                "description": "Link from PC7 port FastEthernet0/0 to SW1 port 2",
+                "destination_node_id": 20,
+                "destination_port_id": 247,
+                "destination_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "2",
+                    "x": 53.87013287181185,
+                    "y": 36.16035612442235
+                },
+                "id": 14,
+                "source_node_id": 17,
+                "source_port_id": 234,
+                "source_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/0",
+                    "x": -24.761005837071934,
+                    "y": 8.632537094391097
                 }
             },
             {
@@ -347,8 +345,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "1",
-                    "x": -9.157571053716879,
-                    "y": -6.094950326514265
+                    "x": -21.17838633388817,
+                    "y": -6.80205710770079
                 },
                 "id": 15,
                 "source_node_id": 18,
@@ -357,8 +355,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "f0/1",
-                    "x": 69.1722896794783,
-                    "y": 29.952814702783314
+                    "x": 71.29361002303796,
+                    "y": 19.3462129849851
                 }
             },
             {
@@ -369,8 +367,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "f0/0",
-                    "x": -25.384776310850214,
-                    "y": 27.656854249492397
+                    "x": -28.920310216782923,
+                    "y": -10.526911934581165
                 },
                 "id": 16,
                 "source_node_id": 21,
@@ -401,8 +399,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "f0/1",
-                    "x": 77.26236901423519,
-                    "y": 21.50376750914802
+                    "x": 73.26236901423519,
+                    "y": 24.50376750914802
                 }
             },
             {
@@ -424,7 +422,7 @@
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "eth0",
                     "x": 38.74843020053606,
-                    "y": 59.084333325722355
+                    "y": 68.08433332572235
                 }
             },
             {
@@ -435,8 +433,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "f0/1",
-                    "x": 37.24264068711926,
-                    "y": 53.51471862576142
+                    "x": 45.24264068711926,
+                    "y": 48.51471862576142
                 },
                 "id": 19,
                 "source_node_id": 14,
@@ -445,8 +443,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "f0/0",
-                    "x": 37.24264068711926,
-                    "y": -23.65685424949237
+                    "x": 48.24264068711926,
+                    "y": -21.65685424949237
                 }
             },
             {
@@ -457,8 +455,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "s1/0",
-                    "x": -42.639610306789265,
-                    "y": 13.50609665440993
+                    "x": -40.639610306789265,
+                    "y": 16.50609665440993
                 },
                 "id": 20,
                 "source_node_id": 23,
@@ -467,8 +465,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "s1/0",
-                    "x": 87.79036790187172,
-                    "y": -27.254833995939038
+                    "x": 63.79036790187172,
+                    "y": -16.254833995939038
                 }
             },
             {
@@ -479,8 +477,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "f0/1",
-                    "x": -29.647145325085432,
-                    "y": 4.111456180001682
+                    "x": -39.64714532508543,
+                    "y": 7.111456180001682
                 },
                 "id": 21,
                 "source_node_id": 24,
@@ -552,10 +550,52 @@
                 },
                 "ports": [
                     {
+                        "adapter_number": 0,
+                        "description": "connected to R6 on port FastEthernet0/1",
+                        "id": 1,
+                        "link_id": 9,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 2,
+                        "name": "FastEthernet0/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 2,
+                        "description": "connected to R2 on port Serial1/0",
+                        "id": 180,
+                        "link_id": 10,
+                        "name": "Serial2/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 181,
+                        "name": "Serial2/1",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 182,
+                        "name": "Serial2/2",
+                        "port_number": 2
+                    },
+                    {
+                        "adapter_number": 2,
+                        "id": 183,
+                        "name": "Serial2/3",
+                        "port_number": 3
+                    },
+                    {
                         "adapter_number": 1,
                         "description": "connected to SW10 on port FastEthernet1/0",
                         "id": 3,
-                        "link_id": 3,
+                        "link_id": 1,
                         "name": "FastEthernet1/0",
                         "nio": "NIO_UDP",
                         "port_number": 0
@@ -652,48 +692,6 @@
                         "id": 18,
                         "name": "FastEthernet1/15",
                         "port_number": 15
-                    },
-                    {
-                        "adapter_number": 0,
-                        "description": "connected to R6 on port FastEthernet0/1",
-                        "id": 1,
-                        "link_id": 9,
-                        "name": "FastEthernet0/0",
-                        "nio": "NIO_UDP",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 0,
-                        "id": 2,
-                        "name": "FastEthernet0/1",
-                        "port_number": 1
-                    },
-                    {
-                        "adapter_number": 2,
-                        "description": "connected to R2 on port Serial1/0",
-                        "id": 180,
-                        "link_id": 10,
-                        "name": "Serial2/0",
-                        "nio": "NIO_UDP",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 2,
-                        "id": 181,
-                        "name": "Serial2/1",
-                        "port_number": 1
-                    },
-                    {
-                        "adapter_number": 2,
-                        "id": 182,
-                        "name": "Serial2/2",
-                        "port_number": 2
-                    },
-                    {
-                        "adapter_number": 2,
-                        "id": 183,
-                        "name": "Serial2/3",
-                        "port_number": 3
                     }
                 ],
                 "properties": {
@@ -726,8 +724,8 @@
                 "symbol": ":/symbols/multilayer_switch.svg",
                 "type": "C3725",
                 "vm_id": "c41ac394-2993-412e-9a7e-8ffbc577b0b3",
-                "x": 49.5,
-                "y": -23.5
+                "x": 42.428932188134524,
+                "y": -46.127416997969526
             },
             {
                 "description": "Router c3725",
@@ -742,10 +740,22 @@
                 },
                 "ports": [
                     {
+                        "adapter_number": 0,
+                        "id": 39,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 40,
+                        "name": "FastEthernet0/1",
+                        "port_number": 1
+                    },
+                    {
                         "adapter_number": 1,
                         "description": "connected to SwR7 on port FastEthernet1/0",
                         "id": 41,
-                        "link_id": 3,
+                        "link_id": 1,
                         "name": "FastEthernet1/0",
                         "nio": "NIO_UDP",
                         "port_number": 0
@@ -754,7 +764,7 @@
                         "adapter_number": 1,
                         "description": "connected to SW12 on port FastEthernet1/0",
                         "id": 42,
-                        "link_id": 2,
+                        "link_id": 3,
                         "name": "FastEthernet1/1",
                         "nio": "NIO_UDP",
                         "port_number": 1
@@ -845,18 +855,6 @@
                         "id": 56,
                         "name": "FastEthernet1/15",
                         "port_number": 15
-                    },
-                    {
-                        "adapter_number": 0,
-                        "id": 39,
-                        "name": "FastEthernet0/0",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 0,
-                        "id": 40,
-                        "name": "FastEthernet0/1",
-                        "port_number": 1
                     }
                 ],
                 "properties": {
@@ -889,7 +887,7 @@
                 "type": "C3725",
                 "vm_id": "69c9441a-97b0-461c-8de5-4bb69f1df37b",
                 "x": 189.5,
-                "y": 59.0
+                "y": 84.45584412271572
             },
             {
                 "description": "Router c3725",
@@ -904,10 +902,22 @@
                 },
                 "ports": [
                     {
+                        "adapter_number": 0,
+                        "id": 57,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 58,
+                        "name": "FastEthernet0/1",
+                        "port_number": 1
+                    },
+                    {
                         "adapter_number": 1,
                         "description": "connected to SW10 on port FastEthernet1/1",
                         "id": 59,
-                        "link_id": 2,
+                        "link_id": 3,
                         "name": "FastEthernet1/0",
                         "nio": "NIO_UDP",
                         "port_number": 0
@@ -943,7 +953,7 @@
                         "adapter_number": 1,
                         "description": "connected to PC3 on port FastEthernet0/0",
                         "id": 64,
-                        "link_id": 1,
+                        "link_id": 2,
                         "name": "FastEthernet1/5",
                         "nio": "NIO_UDP",
                         "port_number": 5
@@ -1010,18 +1020,6 @@
                         "id": 74,
                         "name": "FastEthernet1/15",
                         "port_number": 15
-                    },
-                    {
-                        "adapter_number": 0,
-                        "id": 57,
-                        "name": "FastEthernet0/0",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 0,
-                        "id": 58,
-                        "name": "FastEthernet0/1",
-                        "port_number": 1
                     }
                 ],
                 "properties": {
@@ -1054,7 +1052,7 @@
                 "type": "C3725",
                 "vm_id": "77a72f1d-e207-4ab4-969e-31eeb686cac8",
                 "x": 39.5,
-                "y": 134.0
+                "y": 159.4558441227157
             },
             {
                 "description": "Router c3725",
@@ -1113,7 +1111,7 @@
                 "type": "C3725",
                 "vm_id": "2d806f44-de44-4744-92cf-26a5c03564ba",
                 "x": -182.5,
-                "y": 120.5
+                "y": 145.9558441227157
             },
             {
                 "description": "Router c3725",
@@ -1131,7 +1129,7 @@
                         "adapter_number": 0,
                         "description": "connected to SW12 on port FastEthernet1/5",
                         "id": 81,
-                        "link_id": 1,
+                        "link_id": 2,
                         "name": "FastEthernet0/0",
                         "nio": "NIO_UDP",
                         "port_number": 0
@@ -1172,7 +1170,7 @@
                 "type": "C3725",
                 "vm_id": "acb7f3ad-eb6a-4c73-97b9-ced977b1c9c1",
                 "x": -56.58831175456858,
-                "y": 196.91421356237308
+                "y": 222.37005768508877
             },
             {
                 "description": "Router c3725",
@@ -1231,7 +1229,7 @@
                 "type": "C3725",
                 "vm_id": "88d785df-1de1-4ae5-8699-1a6ea33f5fc3",
                 "x": 125.98528137423861,
-                "y": 191.25735931288068
+                "y": 216.71320343559637
             },
             {
                 "description": "Router c3725",
@@ -1290,7 +1288,7 @@
                 "type": "C3725",
                 "vm_id": "9e43ac30-ba87-4524-90e8-2eccafedcd4e",
                 "x": 267.5,
-                "y": 120.5
+                "y": 145.9558441227157
             },
             {
                 "description": "Router c3725",
@@ -1304,6 +1302,18 @@
                     "y": -23.585786437626915
                 },
                 "ports": [
+                    {
+                        "adapter_number": 0,
+                        "id": 139,
+                        "name": "FastEthernet0/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 140,
+                        "name": "FastEthernet0/1",
+                        "port_number": 1
+                    },
                     {
                         "adapter_number": 1,
                         "description": "connected to SW12 on port FastEthernet1/1",
@@ -1408,18 +1418,6 @@
                         "id": 156,
                         "name": "FastEthernet1/15",
                         "port_number": 15
-                    },
-                    {
-                        "adapter_number": 0,
-                        "id": 139,
-                        "name": "FastEthernet0/0",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 0,
-                        "id": 140,
-                        "name": "FastEthernet0/1",
-                        "port_number": 1
                     }
                 ],
                 "properties": {
@@ -1452,7 +1450,7 @@
                 "type": "C3725",
                 "vm_id": "4bfdc4e1-e81b-4858-8403-958f30f0ea0c",
                 "x": -110.5,
-                "y": 59.0
+                "y": 84.45584412271572
             },
             {
                 "description": "Router c3725",
@@ -1462,24 +1460,15 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "R6",
-                    "x": 22.2578125,
-                    "y": -25.0
+                    "x": 19.2578125,
+                    "y": -21.0
                 },
                 "ports": [
-                    {
-                        "adapter_number": 1,
-                        "description": "connected to SW1 on port 4",
-                        "id": 254,
-                        "link_id": 11,
-                        "name": "FastEthernet1/0",
-                        "nio": "NIO_UDP",
-                        "port_number": 0
-                    },
                     {
                         "adapter_number": 0,
                         "description": "connected to SW2 on port 4",
                         "id": 161,
-                        "link_id": 12,
+                        "link_id": 13,
                         "name": "FastEthernet0/0",
                         "nio": "NIO_UDP",
                         "port_number": 0
@@ -1492,6 +1481,15 @@
                         "name": "FastEthernet0/1",
                         "nio": "NIO_UDP",
                         "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to SW1 on port 4",
+                        "id": 254,
+                        "link_id": 11,
+                        "name": "FastEthernet1/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
                     }
                 ],
                 "properties": {
@@ -1522,8 +1520,8 @@
                 "server_id": 1,
                 "type": "C3725",
                 "vm_id": "61811fc3-0b02-4b93-b2bb-0a636e7f38f4",
-                "x": 414.17157287525384,
-                "y": -98.41421356237308
+                "x": 344.1715728752538,
+                "y": -70.95836943965736
             },
             {
                 "description": "Router c3725",
@@ -1533,10 +1531,28 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "R2",
-                    "x": 13.772531125761418,
-                    "y": -19.34314575050763
+                    "x": 21.772531125761418,
+                    "y": 41.65685424949237
                 },
                 "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R1 on port FastEthernet0/1",
+                        "id": 163,
+                        "link_id": 19,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R3 on port FastEthernet0/1",
+                        "id": 164,
+                        "link_id": 21,
+                        "name": "FastEthernet0/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    },
                     {
                         "adapter_number": 1,
                         "description": "connected to SwR7 on port Serial2/0",
@@ -1563,24 +1579,6 @@
                         "id": 179,
                         "name": "Serial1/3",
                         "port_number": 3
-                    },
-                    {
-                        "adapter_number": 0,
-                        "description": "connected to R1 on port FastEthernet0/1",
-                        "id": 163,
-                        "link_id": 19,
-                        "name": "FastEthernet0/0",
-                        "nio": "NIO_UDP",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 0,
-                        "description": "connected to R3 on port FastEthernet0/1",
-                        "id": 164,
-                        "link_id": 21,
-                        "name": "FastEthernet0/1",
-                        "nio": "NIO_UDP",
-                        "port_number": 1
                     }
                 ],
                 "properties": {
@@ -1611,8 +1609,8 @@
                 "server_id": 1,
                 "type": "C3725",
                 "vm_id": "fed41ed3-a080-4ae6-8811-22cff0d64c33",
-                "x": -333.0,
-                "y": -97.0
+                "x": -275.0,
+                "y": -55.54415587728429
             },
             {
                 "description": "Router c3725",
@@ -1630,7 +1628,7 @@
                         "adapter_number": 0,
                         "description": "connected to SW1 on port 3",
                         "id": 232,
-                        "link_id": 14,
+                        "link_id": 12,
                         "name": "FastEthernet0/0",
                         "nio": "NIO_UDP",
                         "port_number": 0
@@ -1671,7 +1669,7 @@
                 "type": "C3725",
                 "vm_id": "7b1a2106-4502-44e3-9121-00e0557a6a06",
                 "x": 642.5,
-                "y": -254.5
+                "y": -229.0441558772843
             },
             {
                 "description": "Router c3725",
@@ -1689,7 +1687,7 @@
                         "adapter_number": 0,
                         "description": "connected to SW1 on port 2",
                         "id": 234,
-                        "link_id": 13,
+                        "link_id": 14,
                         "name": "FastEthernet0/0",
                         "nio": "NIO_UDP",
                         "port_number": 0
@@ -1730,7 +1728,7 @@
                 "type": "C3725",
                 "vm_id": "b1c341ab-0d71-428f-a5df-96220afaf307",
                 "x": 642.5,
-                "y": -104.5
+                "y": -79.0441558772843
             },
             {
                 "description": "Router c3725",
@@ -1740,8 +1738,8 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "R5",
-                    "x": 22.2578125,
-                    "y": -25.0
+                    "x": 18.722278594067234,
+                    "y": 45.0035713374682
                 },
                 "ports": [
                     {
@@ -1790,8 +1788,8 @@
                 "server_id": 1,
                 "type": "C3725",
                 "vm_id": "d2f03e39-d12d-4927-afe5-7b9bda4b7b0a",
-                "x": 408.5147186257614,
-                "y": -246.9999999999999
+                "x": 353.36038969321066,
+                "y": -225.07968978321693
             },
             {
                 "description": "Ethernet switch",
@@ -1818,7 +1816,7 @@
                     {
                         "description": "connected to PC7 on port FastEthernet0/0",
                         "id": 247,
-                        "link_id": 13,
+                        "link_id": 14,
                         "name": "2",
                         "nio": "NIO_UDP",
                         "port_number": 2,
@@ -1828,7 +1826,7 @@
                     {
                         "description": "connected to PC6 on port FastEthernet0/0",
                         "id": 248,
-                        "link_id": 14,
+                        "link_id": 12,
                         "name": "3",
                         "nio": "NIO_UDP",
                         "port_number": 3,
@@ -1880,7 +1878,7 @@
                 "server_id": 1,
                 "type": "EthernetSwitch",
                 "x": 527.6837661840735,
-                "y": -165.99999999999997
+                "y": -140.54415587728428
             },
             {
                 "description": "Ethernet switch",
@@ -1924,7 +1922,7 @@
                     {
                         "description": "connected to R6 on port FastEthernet0/0",
                         "id": 258,
-                        "link_id": 12,
+                        "link_id": 13,
                         "name": "4",
                         "nio": "NIO_UDP",
                         "port_number": 4,
@@ -1965,8 +1963,8 @@
                 },
                 "server_id": 1,
                 "type": "EthernetSwitch",
-                "x": 197.5,
-                "y": -268.00000000000006
+                "x": 197.49999999999997,
+                "y": -242.54415587728437
             },
             {
                 "description": "Router c3725",
@@ -1980,6 +1978,24 @@
                     "y": 43.0
                 },
                 "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to dreigada-docker-bind-1 on port eth0",
+                        "id": 263,
+                        "link_id": 18,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to SW2 on port 1",
+                        "id": 264,
+                        "link_id": 17,
+                        "name": "FastEthernet0/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    },
                     {
                         "adapter_number": 1,
                         "description": "connected to R1 on port Serial1/0",
@@ -2006,24 +2022,6 @@
                         "id": 274,
                         "name": "Serial1/3",
                         "port_number": 3
-                    },
-                    {
-                        "adapter_number": 0,
-                        "description": "connected to dreigada-docker-bind-1 on port eth0",
-                        "id": 263,
-                        "link_id": 18,
-                        "name": "FastEthernet0/0",
-                        "nio": "NIO_UDP",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 0,
-                        "description": "connected to SW2 on port 1",
-                        "id": 264,
-                        "link_id": 17,
-                        "name": "FastEthernet0/1",
-                        "nio": "NIO_UDP",
-                        "port_number": 1
                     }
                 ],
                 "properties": {
@@ -2055,7 +2053,7 @@
                 "type": "C3725",
                 "vm_id": "05c95114-fed6-4076-980a-ac33321bc9e9",
                 "x": 42.0,
-                "y": -356.0
+                "y": -330.5441558772843
             },
             {
                 "description": "Router c3725",
@@ -2065,10 +2063,28 @@
                     "color": "#ff000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                     "text": "R1",
-                    "x": 5.287249751522893,
-                    "y": -17.928932188134553
+                    "x": 22.287249751522893,
+                    "y": -20.928932188134553
                 },
                 "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R3 on port FastEthernet0/0",
+                        "id": 265,
+                        "link_id": 22,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R2 on port FastEthernet0/0",
+                        "id": 266,
+                        "link_id": 19,
+                        "name": "FastEthernet0/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    },
                     {
                         "adapter_number": 1,
                         "description": "connected to R4 on port Serial1/0",
@@ -2095,24 +2111,6 @@
                         "id": 270,
                         "name": "Serial1/3",
                         "port_number": 3
-                    },
-                    {
-                        "adapter_number": 0,
-                        "description": "connected to R3 on port FastEthernet0/0",
-                        "id": 265,
-                        "link_id": 22,
-                        "name": "FastEthernet0/0",
-                        "nio": "NIO_UDP",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 0,
-                        "description": "connected to R2 on port FastEthernet0/0",
-                        "id": 266,
-                        "link_id": 19,
-                        "name": "FastEthernet0/1",
-                        "nio": "NIO_UDP",
-                        "port_number": 1
                     }
                 ],
                 "properties": {
@@ -2143,8 +2141,8 @@
                 "server_id": 1,
                 "type": "C3725",
                 "vm_id": "7f207b91-8e41-4895-8572-b27c38299256",
-                "x": -333.0,
-                "y": -247.0
+                "x": -275.0,
+                "y": -240.5441558772843
             },
             {
                 "description": "Router c3725",
@@ -2158,15 +2156,6 @@
                     "y": -21.464466094067262
                 },
                 "ports": [
-                    {
-                        "adapter_number": 1,
-                        "description": "connected to PC1 on port FastEthernet0/0",
-                        "id": 279,
-                        "link_id": 23,
-                        "name": "FastEthernet1/0",
-                        "nio": "NIO_UDP",
-                        "port_number": 0
-                    },
                     {
                         "adapter_number": 0,
                         "description": "connected to R1 on port FastEthernet0/0",
@@ -2184,6 +2173,15 @@
                         "name": "FastEthernet0/1",
                         "nio": "NIO_UDP",
                         "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to PC1 on port FastEthernet0/0",
+                        "id": 279,
+                        "link_id": 23,
+                        "name": "FastEthernet1/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
                     }
                 ],
                 "properties": {
@@ -2215,7 +2213,7 @@
                 "type": "C3725",
                 "vm_id": "305c98da-9fbc-4861-a964-f7ef98979c22",
                 "x": -483.0,
-                "y": -172.0
+                "y": -146.5441558772843
             },
             {
                 "description": "Router c3725",
@@ -2274,7 +2272,7 @@
                 "type": "C3725",
                 "vm_id": "c4699804-0a49-4ce8-9bf0-2b1a9fd0a6b3",
                 "x": -632.5,
-                "y": -179.5
+                "y": -154.0441558772843
             },
             {
                 "description": "Docker container",
@@ -2311,8 +2309,8 @@
                 "server_id": 2,
                 "type": "DockerVM",
                 "vm_id": "fda400fc-dd0b-446e-8bda-9cf4e3d93f54",
-                "x": 42.5,
-                "y": -479.5
+                "x": 41.08578643762691,
+                "y": -455.4583694396574
             }
         ],
         "notes": [
@@ -2321,212 +2319,212 @@
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                 "text": "10.0.10.7 \n10.0.10.71 \n10.0.10.135 ",
                 "x": 38.183766184073576,
-                "y": 40.911688245431414
+                "y": 66.36753236814712
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                 "text": "10.0.10.12 \n10.0.10.76 \n10.0.10.140 ",
                 "x": 31.1126983722081,
-                "y": 185.16147160748713
+                "y": 210.61731573020282
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                 "text": "10.0.10.10\n10.0.10.74\n10.0.10.138",
-                "x": 260.2152954766495,
-                "y": 53.63961030678922
+                "x": 260.21529547664954,
+                "y": 79.09545442950493
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                 "text": "10.0.10.11\n10.0.10.75\n10.0.10.139",
                 "x": -177.9898987322333,
-                "y": 49.59797974644666
+                "y": 75.05382386916237
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.0.67/26",
-                "x": 97.53910524340094,
-                "y": -50.09336238845194
+                "text": "201.6.0.67/26\n2001:db8:6:67::7",
+                "x": 93.29646455628168,
+                "y": -76.47813869930218
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.0.137/26",
-                "x": -51.301515190165,
-                "y": -42.26493526370576
+                "text": "201.6.0.137/26\n2001:db8:6:27::7",
+                "x": -61.95836943965738,
+                "y": -74.30656582404836
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.0.132/26",
-                "x": -267.8040405071068,
-                "y": -46.67914882607883
+                "text": "201.6.0.132/26\n2001:db8:6:27::2",
+                "x": -210.24769132100275,
+                "y": -19.223304703363123
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                 "text": "Area 4\n201.6.4.0/24",
                 "x": -473.0,
-                "y": -285.9999999999999
+                "y": -260.5441558772842
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                 "text": "Area 2\n201.6.2.0/24",
                 "x": 539.142135623731,
-                "y": -301.41421356237316
+                "y": -275.9583694396575
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                 "text": "Area 3",
-                "x": 39.0,
-                "y": -67.0
+                "x": 30.514718625761418,
+                "y": -184.37972567696687
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                 "text": "201.6.4.1/26\n2001:db8:6:12::1",
-                "x": -299.813275223096,
-                "y": -179.7056274847714
+                "x": -229.813275223096,
+                "y": -176.24978336205572
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.4.2/26",
-                "x": -298.90515831513284,
-                "y": -134.9568901432422
+                "text": "201.6.4.2/26\n2001:db8:6:12::2",
+                "x": -226.90515831513284,
+                "y": -105.50104602052645
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.4.72/26",
-                "x": -409.719912834644,
-                "y": -79.60155108391483
+                "text": "201.6.4.72/26\n2001:db8:6:23::2",
+                "x": -368.719912834644,
+                "y": -35.145706961199124
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.4.73/26",
-                "x": -476.69404692058947,
-                "y": -113.3416664540924
+                "text": "201.6.4.73/26\n2001:db8:6:23::3",
+                "x": -452.69404692058947,
+                "y": -87.8858223313767
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.4.133/26",
+                "text": "201.6.4.133/26\n2001:db8:6:33::3",
                 "x": -547.2037149124674,
-                "y": -130.8183258569794
+                "y": -105.36248173426371
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.4.131/26",
-                "x": -573.165655689593,
-                "y": -182.94321753800733
+                "text": "201.6.4.131/26\nipv6: autoconfig",
+                "x": -574.165655689593,
+                "y": -172.48737341529164
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.4.203/26",
-                "x": -477.50523010263254,
-                "y": -208.90515831513292
+                "text": "201.6.4.203/26\n2001:db8:6:13::3",
+                "x": -449.5052301026326,
+                "y": -194.4493141924172
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                 "text": "201.6.4.201/26\n2001:db8:6:13::1",
-                "x": -430.6351724175436,
-                "y": -250.42344827836257
+                "x": -370.6351724175436,
+                "y": -243.96760415564688
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.0.201/26",
-                "x": -249.52900397563414,
-                "y": -287.69195487953647,
+                "text": "201.6.0.201/26\n2001:db8:6:14::1",
+                "x": -208.52900397563417,
+                "y": -229.23611075682084,
                 "z": 1.0
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.0.204/26",
-                "x": -54.71067811865467,
-                "y": -354.78383797157323,
+                "text": "201.6.0.204/26\n2001:db8:6:14::4",
+                "x": -60.71067811865467,
+                "y": -340.32799384885755,
                 "z": 1.0
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.0.66/26",
-                "x": 397.5182899632294,
-                "y": -50.89235226167527
+                "text": "201.6.0.66/26\n2001:db8:6:67::6",
+                "x": 309.51828996322934,
+                "y": -24.436508138959567
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.0.6/26",
-                "x": 401.05382386916233,
-                "y": -137.15937956643404
+                "text": "201.6.0.6/26\n2001:db8:6:456::6",
+                "x": 236.05382386916233,
+                "y": -90.70353544371835
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.2.6/24",
-                "x": 483.27922061357845,
-                "y": -83.92536085066632
+                "text": "201.6.2.6/24\n2001:db8:6:5656::6",
+                "x": 409.4507934888322,
+                "y": -44.44870144777932
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.2.5/24",
-                "x": 480.6518036156089,
-                "y": -232.21677477306466
+                "text": "201.6.2.5/24\n2001:db8:6:5656::5",
+                "x": 424.861435713737,
+                "y": -230.43860018001268
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.0.5/26",
-                "x": 381.45584412271563,
-                "y": -206.25483399593904
+                "text": "201.6.0.5/26\n2001:db8:6:456::5",
+                "x": 295.20963209812805,
+                "y": -261.8233764908628
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.2.106/24",
-                "x": 561.4629867976516,
-                "y": -230.60155108391487
+                "text": "201.6.2.106/24\nipv6: autoconfig",
+                "x": 630.4629867976516,
+                "y": -168.14570696119915
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.0.4/26",
-                "x": 119.45584412271569,
-                "y": -344.25483399593907
+                "text": "201.6.0.4/26\n2001:db8:6:456::4",
+                "x": 114.45584412271569,
+                "y": -330.7989898732234
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                 "text": "201.6.1.4/24",
                 "x": 80.45584412271569,
-                "y": -382.25483399593907
+                "y": -356.7989898732234
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
                 "text": "201.6.1.100/24",
                 "x": 81.45584412271569,
-                "y": -409.25483399593907
+                "y": -399.25483399593907
             },
             {
                 "color": "#ff000000",
                 "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                "text": "201.6.2.107/24",
-                "x": 560.249783362055,
-                "y": -81.90811690796323
+                "text": "201.6.2.107/24\nipv6: autoconfig",
+                "x": 610.249783362055,
+                "y": -20.452272785247523
             }
         ],
         "servers": [
