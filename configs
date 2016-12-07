@@ -1,8 +1,4 @@
-conf t
-int f0/0
-ip add 10.0.10.103 255.255.255.0
-no shut
-
+#AREA 3
 
 #switch config
 
@@ -114,6 +110,7 @@ end
 conf t
 int f0/0
 no shut
+no ip dhcp client request dns-nameserver
 ip add dhcp
 end
 
@@ -325,6 +322,7 @@ ip add 201.6.1.4 255.255.255.0
 no shut
 int s1/0
 ip add 201.6.0.204 255.255.255.192
+encapsulation ppp
 no shut
 exit
 
@@ -343,7 +341,10 @@ ip domain lookup
 ip name-server 201.6.1.100
 end
 
-ping ns1.ar.org repeat 3
+
+
+
+
 
 
 

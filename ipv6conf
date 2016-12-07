@@ -1,0 +1,142 @@
+### IPV6
+
+# R1
+conf t
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 1.1.1.1
+int f0/0
+ipv6 add 2001:db8:6:13::1/64
+ipv6 ospf 1 area 4
+no shut
+int f0/1
+ipv6 add 2001:db8:6:12::1/64
+ipv6 ospf 1 area 4
+no shut
+int s1/0
+ipv6 add 2001:db8:6:14::1/64
+ipv6 ospf 1 area 0
+no shut
+end
+
+# R2
+conf t
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 2.2.2.2
+int f0/0
+ipv6 add 2001:db8:6:12::2/64
+ipv6 ospf 1 area 4
+no shut
+int f0/1
+ipv6 add 2001:db8:6:23::2/64
+ipv6 ospf 1 area 4
+no shut
+int s1/0
+ipv6 add 2001:db8:6:27::2/64
+ipv6 ospf 1 area 0
+no shut
+end
+
+# R3
+conf t
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 3.3.3.3
+int f0/0
+ipv6 add 2001:db8:6:13::3/64
+ipv6 ospf 1 area 4
+no shut
+int f0/1
+ipv6 add 2001:db8:6:23::3/64
+ipv6 ospf 1 area 4
+no shut
+int f1/0
+ipv6 add 2001:db8:6:33::3/64
+ipv6 ospf 1 area 4
+no shut
+end
+
+#PC1
+conf t
+int f0/0
+ipv6 address autoconfig
+end
+
+# R4
+conf t
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 4.4.4.4
+int s1/0
+ipv6 add 2001:db8:6:14::4/64
+ipv6 ospf 1 area 0
+no shut
+int f0/1
+ipv6 add 2001:db8:6:456::4/64
+ipv6 ospf 1 area 0
+no shut
+end
+
+#R5
+conf t
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 5.5.5.5
+int f0/0
+ipv6 add 2001:db8:6:456::5/64
+ipv6 ospf 1 area 0
+no shut
+int f0/1
+ipv6 add 2001:db8:6:5656::5/64
+ipv6 ospf 1 area 2
+no shut
+end
+
+#R6
+conf t
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 6.6.6.6
+int f0/0
+ipv6 add 2001:db8:6:456::6/64
+ipv6 ospf 1 area 0
+no shut
+int f0/1
+ipv6 add 2001:db8:6:67::6/64
+ipv6 ospf 1 area 0
+no shut
+int f1/0
+ipv6 add 2001:db8:6:5656::6/64
+ipv6 ospf 1 area 2
+no shut
+end
+
+#PC6
+conf t
+int f0/0
+ipv6 address autoconfig
+end
+
+#PC7
+conf t
+int f0/0
+ipv6 address autoconfig
+end
+
+#SwR7
+conf t
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 7.7.7.7
+int f0/0
+ipv6 add 2001:db8:6:67::7/64
+ipv6 ospf 1 area 0
+no shut
+int s2/0
+ipv6 add 2001:db8:6:27::7/64
+ipv6 ospf 1 area 0
+no shut
+end
+
+
