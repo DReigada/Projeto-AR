@@ -1,0 +1,109 @@
+#R8
+conf t
+ip routing
+int f0/0
+ip add 201.6.0.8 255.255.255.192
+no shut
+int f0/1
+ip add 10.0.20.8 255.255.255.0
+no shut
+exit
+router ospf 1
+router-id 8.8.8.8
+network 201.6.0.0 0.0.0.63 area 0
+end
+
+
+#PC
+ip 10.0.20.108/24 10.0.20.8
+
+
+
+## GRE ##
+#R8
+conf t
+int tunnel 0
+ip add 10.0.30.8 255.255.255.0
+tunnel source 201.6.0.8
+tunnel destination 201.6.0.67
+tunnel mode gre ip
+int tunnel 0
+no shut
+ip route 10.0.10.64 255.255.255.192 tunnel 0
+end
+
+#SwR7
+conf t
+int tunnel 0
+ip add 10.0.30.7 255.255.255.0
+tunnel source 201.6.0.67
+tunnel destination 201.6.0.8
+tunnel mode gre ip
+int tunnel 0
+no shut
+ip route 10.0.20.0 255.255.255.0 tunnel 0
+end
+
+
+## IPSec
+
+#R8
+conf t
+crypto isakmp policy 1
+authentication pre-share
+lifetime 86400
+exit
+
+crypto isakmp identity address
+crypto isakmp key test12345 address 201.6.0.67
+
+crypto ipsec transform-set transfset1 ah-sha-hmac esp-des esp-sha-hmac 
+mode transport
+exit
+
+access-list 102 permit gre host 201.6.0.8 host 201.6.0.67
+crypto map cryptomap1 local-address f0/0
+crypto map cryptomap1 1 ipsec-isakmp
+match address 102
+set peer 201.6.0.67
+set transform-set transfset1
+exit
+
+int f0/0
+crypto map cryptomap1
+exit
+int tunnel 0
+crypto map cryptomap1
+end
+clear crypto sa
+
+#SwR7
+conf t
+crypto isakmp policy 1
+authentication pre-share
+lifetime 86400
+exit
+
+crypto isakmp identity address
+crypto isakmp key test12345 address 201.6.0.8
+
+crypto ipsec transform-set transfset1 ah-sha-hmac esp-des esp-sha-hmac 
+mode transport
+exit
+
+access-list 102 permit gre host 201.6.0.67 host 201.6.0.8
+crypto map cryptomap1 local-address f0/0
+crypto map cryptomap1 1 ipsec-isakmp
+match address 102
+set peer 201.6.0.8
+set transform-set transfset1
+exit
+
+int f0/0
+crypto map cryptomap1
+exit
+int tunnel 0
+crypto map cryptomap1
+end
+clear crypto sa
+
