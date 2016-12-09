@@ -1,0 +1,18 @@
+#R8
+conf t
+ip routing
+int f0/0
+ip add 201.6.0.8 255.255.255.192
+no shut
+int f0/1
+ip add 10.0.20.8 255.255.255.0
+no shut
+exit
+router ospf 1
+router-id 8.8.8.8
+network 201.6.0.0 0.0.0.63 area 0
+end
+
+
+#PC
+ip 10.0.20.108/24 10.0.20.8
