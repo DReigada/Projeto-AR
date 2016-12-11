@@ -126,15 +126,12 @@ end
 
 #SwR7
 conf t
+ip default-gateway 201.6.3.9
 ipv6 unicast-routing
 ipv6 router ospf 1
 router-id 7.7.7.7
 int f0/0
 ipv6 add 2001:db8:6:67::7/64
-ipv6 ospf 1 area 0
-no shut
-int s2/0
-ipv6 add 2001:db8:6:27::7/64
 ipv6 ospf 1 area 0
 no shut
 end

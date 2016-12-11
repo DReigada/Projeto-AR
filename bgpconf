@@ -1,0 +1,131 @@
+# R9
+
+conf t
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 9.9.9.9
+int s1/0 
+ip add 201.6.0.139 255.255.255.192
+ipv6 add 2001:db8:6:27::7/64
+ipv6 ospf 1 area 0
+encapsulation ppp
+no shut
+int f0/0
+ip add 201.6.0.69 255.255.255.192
+ipv6 add 2001:db8:6:67::7/64
+ipv6 ospf 1 area 0
+no shut
+int f0/1
+ip add 201.6.3.9 255.255.255.0
+no shut
+exit
+router bgp 333
+neighbor 201.6.0.132 remote-as 444
+neighbor 201.6.0.66 remote-as 222
+network 201.6.0.64
+network 201.6.0.128
+network 201.6.3.0
+end
+
+
+
+# SwR7
+
+conf t
+no ipv6 unicast-routing
+ip route 0.0.0.0 0.0.0.0 201.6.3.9
+int f0/0
+no ipv6 address 2001:DB8:6:67::7/64
+no ipv6 ospf 1 area 0
+no ip address 201.6.0.67 255.255.255.192
+ip add 201.6.3.7 255.255.255.0
+no shut
+exit
+no router ospf 1
+no ipv6 router ospf 1
+end
+
+
+
+
+### BGP
+#R1
+conf t
+router bgp 444
+#aggregate-address 201.6.4.0 255.255.255.0 summary-only
+neighbor 201.6.0.204 remote-as 111
+neighbor 201.6.4.2 remote-as 444
+neighbor 201.6.4.2 next-hop-self
+redistribute ospf 1
+network 201.6.0.192
+router ospf 1
+no network 201.6.0.192 0.0.0.63 area 0
+redistribute bgp 444
+exit
+end
+
+#R2
+conf t
+router bgp 444
+#aggregate-address 201.6.4.0 255.255.255.0 summary-only
+neighbor 201.6.0.139 remote-as 333
+neighbor 201.6.4.1 remote-as 444
+neighbor 201.6.4.1 next-hop-self
+redistribute ospf 1
+network 201.6.0.128
+exit
+router ospf 1
+no network 201.6.0.128 0.0.0.63 area 0
+redistribute bgp 444
+end
+
+#R4
+conf t
+router bgp 111
+neighbor 201.6.0.201 remote-as 444
+neighbor 201.6.0.8 remote-as 555
+neighbor 201.6.0.5 remote-as 222
+neighbor 201.6.0.6 remote-as 222
+network 201.6.1.0
+network 201.6.0.0
+network 201.6.0.192
+exit
+no router ospf 1
+end
+
+#R5
+conf t
+router bgp 222
+neighbor 201.6.0.4 remote-as 111
+neighbor 201.6.0.8 remote-as 555
+neighbor 201.6.0.6 remote-as 222
+neighbor 201.6.0.6 next-hop-self
+network 201.6.0.0
+network 201.6.2.0
+no router ospf 1
+end
+
+#R6
+conf t
+router bgp 222
+neighbor 201.6.0.4 remote-as 111
+neighbor 201.6.0.8 remote-as 555
+neighbor 201.6.0.5 remote-as 222
+neighbor 201.6.0.69 remote-as 333
+neighbor 201.6.0.5 next-hop-self
+network 201.6.0.0
+network 201.6.0.64
+network 201.6.2.0
+no router ospf 1
+end
+
+#R8
+conf t
+router bgp 555
+neighbor 201.6.0.4 remote-as 111
+neighbor 201.6.0.5 remote-as 222
+neighbor 201.6.0.6 remote-as 222
+network 201.6.0.0
+exit
+no router ospf 1
+end
