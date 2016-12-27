@@ -43,7 +43,20 @@ no shut
 exit
 no router ospf 1
 no ipv6 router ospf 1
+no crypto isakmp key test12345 address 201.6.0.8
+crypto isakmp key test12345 address 201.6.5.8
+crypto map cryptomap1 1 ipsec-isakmp 
+no set peer 201.6.0.8
+set peer 201.6.5.8
+exit
+int tunnel 0
+tunnel source 201.6.3.7
+tunnel destination 201.6.5.8
+exit
+no access-list 102 permit gre host 201.6.0.67 host 201.6.0.8
+access-list 102 permit gre host 201.6.3.7 host 201.6.5.8
 end
+
 
 
 
@@ -81,7 +94,7 @@ no crypto isakmp key test12345 address 201.6.0.67
 crypto isakmp key test12345 address 201.6.3.7
 crypto map cryptomap1 1 ipsec-isakmp 
 no set peer 201.6.0.67
-set peer 201.6.5.10
+set peer 201.6.3.7
 exit
 int tunnel 0
 tunnel source 201.6.5.8
@@ -165,3 +178,13 @@ no router ospf 1
 end
 
 
+
+# SERVER 1
+conf t
+no ip routing
+int f0/0
+ip add 10.0.20.108 255.255.255.0
+no shut
+exit
+ip default-gateway 10.0.20.8
+end
